@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MedMatch - Your Health, Our Priority</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .registration-buttons {
+            margin-bottom: 30px;
+        }
+
+        .registration-buttons a {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #2ecc71;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .registration-buttons a:hover {
+            background-color: #27ae60;
+        }
+
+        #cta-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #2ecc71;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        #cta-button:hover {
+            background-color: #27ae60;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .feature {
+            flex: 1;
+            max-width: 300px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to MedMatch</h1>
+        <p>Your trusted platform for preliminary diagnosis, OTC medicine recommendations, and connecting with healthcare professionals.</p>
+        <div class="registration-buttons">
+            <a href="{% url 'register_user' %}">Register as User</a>
+            <a href="{% url 'register_doctor' %}">Register as Doctor</a>
+        </div>
+        <a href="#learn-more" id="cta-button">Learn More</a>
+    </header>
+
+    <div class="features">
+        <div class="feature">
+            <h2>Smart Diagnosis</h2>
+            <p>Our advanced algorithms provide accurate preliminary diagnoses for a wide range of health conditions.</p>
+        </div>
+
+        <div class="feature">
+            <h2>OTC Medicine Recommendations</h2>
+            <p>Get personalized recommendations for over-the-counter medicines based on your symptoms and health profile.</p>
+        </div>
+
+        <div class="feature">
+            <h2>Connect with Experts</h2>
+            <p>Access our extensive database of qualified doctors for expert advice and consultations.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 MedMatch. All rights reserved.
+        <br>
+        <a href="{% url 'register_user' %}">Register as User</a> | <a href="{% url 'register_doctor' %}">Register as Doctor</a>
+    </footer>
+</body>
+
+</html>
